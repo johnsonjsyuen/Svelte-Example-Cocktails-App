@@ -1,3 +1,5 @@
+# Svelte-Example-Cocktails-App
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
@@ -103,4 +105,3 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
-# Svelte-Example-Cocktails-App
