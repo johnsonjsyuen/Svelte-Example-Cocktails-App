@@ -1,6 +1,6 @@
 <script>
-	import { onMount } from "svelte";
 	import { apiData, drinks } from './store.js';
+	import Detail from './Detail.svelte';
 
 	$: ingredient = 'Gin';
 
@@ -16,7 +16,6 @@
 	  });
 	}
 	
-	//onMount(async () => fetchDrinks(ingredient));
 	$:{
 		fetchDrinks(ingredient)
 	}
@@ -24,14 +23,19 @@
 
 <main>
 	<h1>Whiskey Drinks Menu</h1>
+	
 	<h2>Filter by ingredient: <input bind:value={ingredient}></h2>
 	
 	<ul>
 	{#each $drinks as drink}
 		<p>Name:<a href={"https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="+drink.idDrink}>{drink.strDrink}</a>
-			<img src={drink.strDrinkThumb+"/preview"} alt={drink.idDrink}/></p>
+			<img src={drink.strDrinkThumb+"/preview"} alt={drink.idDrink} width=200 height=200/>
+			<Detail drinkId={drink.idDrink}></Detail>
+		</p>
 	{/each}
 	</ul>
+
+	
 </main>
 
 <style>
