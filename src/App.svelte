@@ -3,6 +3,7 @@
 	import Detail from './Detail.svelte';
 
 	$: ingredient = 'Gin';
+	$: visibleArray = [];
 
 	const fetchDrinks = async () => {
 	fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i="+ingredient)
@@ -10,6 +11,9 @@
 	  .then(data => {
 			console.log(data);
 		apiData.set(data);
+
+		visibleArray = [...$drinks];
+	    visibleArray.fill(false,0);
 	  }).catch(error => {
 		console.log(error);
 		return [];
@@ -27,11 +31,19 @@
 	<h2>Filter by ingredient: <input bind:value={ingredient}></h2>
 	
 	<ul>
-	{#each $drinks as drink}
-		<p>Name:<a href={"https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="+drink.idDrink}>{drink.strDrink}</a>
-			<img src={drink.strDrinkThumb+"/preview"} alt={drink.idDrink} width=200 height=200/>
-			<Detail drinkId={drink.idDrink}></Detail>
+	{#each $drinks as drink, i}
+	<div 
+	on:mouseover={()=>{console.log(i + "over"); visibleArray[i] = true}}
+	on:mouseout={()=>{console.log(i + "out"); visibleArray[i] = false}}
+    >
+		<p>Name:
+			<a href={"https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="+drink.idDrink}>{drink.strDrink}</a>
+			<img src={drink.strDrinkThumb+"/preview"} alt={drink.idDrink} width=200 height=200 	
+		/>
+			<Detail drinkId={drink.idDrink} visible={visibleArray[i]}></Detail>
 		</p>
+	</div>
+		
 	{/each}
 	</ul>
 
