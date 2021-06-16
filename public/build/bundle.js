@@ -4323,11 +4323,11 @@ var app = (function () {
     const get_cell_header_slot_context = ctx => ({ header: /*header*/ ctx[59] });
 
     // (215:8) {#if expandable}
-    function create_if_block_8(ctx) {
+    function create_if_block_8$1(ctx) {
     	let th;
     	let th_data_previous_value_value;
     	let current;
-    	let if_block = /*batchExpansion*/ ctx[11] && create_if_block_9(ctx);
+    	let if_block = /*batchExpansion*/ ctx[11] && create_if_block_9$1(ctx);
 
     	const block = {
     		c: function create() {
@@ -4352,7 +4352,7 @@ var app = (function () {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block_9(ctx);
+    					if_block = create_if_block_9$1(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(th, null);
@@ -4388,7 +4388,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_8.name,
+    		id: create_if_block_8$1.name,
     		type: "if",
     		source: "(215:8) {#if expandable}",
     		ctx
@@ -4398,7 +4398,7 @@ var app = (function () {
     }
 
     // (221:12) {#if batchExpansion}
-    function create_if_block_9(ctx) {
+    function create_if_block_9$1(ctx) {
     	let button;
     	let chevronright16;
     	let current;
@@ -4448,7 +4448,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_9.name,
+    		id: create_if_block_9$1.name,
     		type: "if",
     		source: "(221:12) {#if batchExpansion}",
     		ctx
@@ -4458,7 +4458,7 @@ var app = (function () {
     }
 
     // (237:8) {#if selectable && !batchSelection}
-    function create_if_block_7(ctx) {
+    function create_if_block_7$1(ctx) {
     	let th;
 
     	const block = {
@@ -4477,7 +4477,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_7.name,
+    		id: create_if_block_7$1.name,
     		type: "if",
     		source: "(237:8) {#if selectable && !batchSelection}",
     		ctx
@@ -4849,8 +4849,8 @@ var app = (function () {
     	let each_1_lookup = new Map();
     	let each_1_anchor;
     	let current;
-    	let if_block0 = /*expandable*/ ctx[3] && create_if_block_8(ctx);
-    	let if_block1 = /*selectable*/ ctx[4] && !/*batchSelection*/ ctx[13] && create_if_block_7(ctx);
+    	let if_block0 = /*expandable*/ ctx[3] && create_if_block_8$1(ctx);
+    	let if_block1 = /*selectable*/ ctx[4] && !/*batchSelection*/ ctx[13] && create_if_block_7$1(ctx);
     	let if_block2 = /*batchSelection*/ ctx[13] && !/*radio*/ ctx[12] && create_if_block_6$1(ctx);
     	let each_value_2 = /*headers*/ ctx[5];
     	validate_each_argument(each_value_2);
@@ -4902,7 +4902,7 @@ var app = (function () {
     						transition_in(if_block0, 1);
     					}
     				} else {
-    					if_block0 = create_if_block_8(ctx);
+    					if_block0 = create_if_block_8$1(ctx);
     					if_block0.c();
     					transition_in(if_block0, 1);
     					if_block0.m(t0.parentNode, t0);
@@ -4919,7 +4919,7 @@ var app = (function () {
 
     			if (/*selectable*/ ctx[4] && !/*batchSelection*/ ctx[13]) {
     				if (if_block1) ; else {
-    					if_block1 = create_if_block_7(ctx);
+    					if_block1 = create_if_block_7$1(ctx);
     					if_block1.c();
     					if_block1.m(t1.parentNode, t1);
     				}
@@ -7105,12 +7105,27 @@ var app = (function () {
     	let t5;
     	let t6;
     	let t7;
-    	let if_block0 = /*drinkDetails*/ ctx[1].strIngredient1 != undefined && create_if_block_6(ctx);
-    	let if_block1 = /*drinkDetails*/ ctx[1].strIngredient2 != undefined && create_if_block_5(ctx);
-    	let if_block2 = /*drinkDetails*/ ctx[1].strIngredient3 != undefined && create_if_block_4(ctx);
-    	let if_block3 = /*drinkDetails*/ ctx[1].strIngredient4 != undefined && create_if_block_3(ctx);
-    	let if_block4 = /*drinkDetails*/ ctx[1].strIngredient5 != undefined && create_if_block_2(ctx);
-    	let if_block5 = /*drinkDetails*/ ctx[1].strIngredient6 != undefined && create_if_block_1(ctx);
+    	let t8;
+    	let t9;
+    	let t10;
+    	let t11;
+    	let t12;
+    	let t13;
+    	let t14;
+    	let t15_value = /*drinkDetails*/ ctx[1].strInstructions + "";
+    	let t15;
+    	let if_block0 = /*drinkDetails*/ ctx[1].strIngredient1 != undefined && create_if_block_23(ctx);
+    	let if_block1 = /*drinkDetails*/ ctx[1].strIngredient2 != undefined && create_if_block_21(ctx);
+    	let if_block2 = /*drinkDetails*/ ctx[1].strIngredient3 != undefined && create_if_block_19(ctx);
+    	let if_block3 = /*drinkDetails*/ ctx[1].strIngredient4 != undefined && create_if_block_17(ctx);
+    	let if_block4 = /*drinkDetails*/ ctx[1].strIngredient5 != undefined && create_if_block_15(ctx);
+    	let if_block5 = /*drinkDetails*/ ctx[1].strIngredient6 != undefined && create_if_block_13(ctx);
+    	let if_block6 = /*drinkDetails*/ ctx[1].strIngredient7 != undefined && create_if_block_11(ctx);
+    	let if_block7 = /*drinkDetails*/ ctx[1].strIngredient8 != undefined && create_if_block_9(ctx);
+    	let if_block8 = /*drinkDetails*/ ctx[1].strIngredient9 != undefined && create_if_block_7(ctx);
+    	let if_block9 = /*drinkDetails*/ ctx[1].strIngredient10 != undefined && create_if_block_5(ctx);
+    	let if_block10 = /*drinkDetails*/ ctx[1].strIngredient11 != undefined && create_if_block_3(ctx);
+    	let if_block11 = /*drinkDetails*/ ctx[1].strIngredient12 != undefined && create_if_block_1(ctx);
 
     	const block = {
     		c: function create() {
@@ -7131,6 +7146,20 @@ var app = (function () {
     			if (if_block4) if_block4.c();
     			t7 = space();
     			if (if_block5) if_block5.c();
+    			t8 = space();
+    			if (if_block6) if_block6.c();
+    			t9 = space();
+    			if (if_block7) if_block7.c();
+    			t10 = space();
+    			if (if_block8) if_block8.c();
+    			t11 = space();
+    			if (if_block9) if_block9.c();
+    			t12 = space();
+    			if (if_block10) if_block10.c();
+    			t13 = space();
+    			if (if_block11) if_block11.c();
+    			t14 = space();
+    			t15 = text(t15_value);
     			add_location(h3, file$1, 25, 4, 546);
     			if (img.src !== (img_src_value = /*drinkDetails*/ ctx[1].strDrinkThumb + "/preview")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*drinkDetails*/ ctx[1].idDrink);
@@ -7157,6 +7186,20 @@ var app = (function () {
     			if (if_block4) if_block4.m(ul, null);
     			append_dev(ul, t7);
     			if (if_block5) if_block5.m(ul, null);
+    			append_dev(ul, t8);
+    			if (if_block6) if_block6.m(ul, null);
+    			append_dev(ul, t9);
+    			if (if_block7) if_block7.m(ul, null);
+    			append_dev(ul, t10);
+    			if (if_block8) if_block8.m(ul, null);
+    			append_dev(ul, t11);
+    			if (if_block9) if_block9.m(ul, null);
+    			append_dev(ul, t12);
+    			if (if_block10) if_block10.m(ul, null);
+    			append_dev(ul, t13);
+    			if (if_block11) if_block11.m(ul, null);
+    			append_dev(ul, t14);
+    			append_dev(ul, t15);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*drinkDetails*/ 2 && t0_value !== (t0_value = /*drinkDetails*/ ctx[1].strDrink + "")) set_data_dev(t0, t0_value);
@@ -7173,7 +7216,7 @@ var app = (function () {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     				} else {
-    					if_block0 = create_if_block_6(ctx);
+    					if_block0 = create_if_block_23(ctx);
     					if_block0.c();
     					if_block0.m(ul, t3);
     				}
@@ -7186,7 +7229,7 @@ var app = (function () {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     				} else {
-    					if_block1 = create_if_block_5(ctx);
+    					if_block1 = create_if_block_21(ctx);
     					if_block1.c();
     					if_block1.m(ul, t4);
     				}
@@ -7199,7 +7242,7 @@ var app = (function () {
     				if (if_block2) {
     					if_block2.p(ctx, dirty);
     				} else {
-    					if_block2 = create_if_block_4(ctx);
+    					if_block2 = create_if_block_19(ctx);
     					if_block2.c();
     					if_block2.m(ul, t5);
     				}
@@ -7212,7 +7255,7 @@ var app = (function () {
     				if (if_block3) {
     					if_block3.p(ctx, dirty);
     				} else {
-    					if_block3 = create_if_block_3(ctx);
+    					if_block3 = create_if_block_17(ctx);
     					if_block3.c();
     					if_block3.m(ul, t6);
     				}
@@ -7225,7 +7268,7 @@ var app = (function () {
     				if (if_block4) {
     					if_block4.p(ctx, dirty);
     				} else {
-    					if_block4 = create_if_block_2(ctx);
+    					if_block4 = create_if_block_15(ctx);
     					if_block4.c();
     					if_block4.m(ul, t7);
     				}
@@ -7238,14 +7281,94 @@ var app = (function () {
     				if (if_block5) {
     					if_block5.p(ctx, dirty);
     				} else {
-    					if_block5 = create_if_block_1(ctx);
+    					if_block5 = create_if_block_13(ctx);
     					if_block5.c();
-    					if_block5.m(ul, null);
+    					if_block5.m(ul, t8);
     				}
     			} else if (if_block5) {
     				if_block5.d(1);
     				if_block5 = null;
     			}
+
+    			if (/*drinkDetails*/ ctx[1].strIngredient7 != undefined) {
+    				if (if_block6) {
+    					if_block6.p(ctx, dirty);
+    				} else {
+    					if_block6 = create_if_block_11(ctx);
+    					if_block6.c();
+    					if_block6.m(ul, t9);
+    				}
+    			} else if (if_block6) {
+    				if_block6.d(1);
+    				if_block6 = null;
+    			}
+
+    			if (/*drinkDetails*/ ctx[1].strIngredient8 != undefined) {
+    				if (if_block7) {
+    					if_block7.p(ctx, dirty);
+    				} else {
+    					if_block7 = create_if_block_9(ctx);
+    					if_block7.c();
+    					if_block7.m(ul, t10);
+    				}
+    			} else if (if_block7) {
+    				if_block7.d(1);
+    				if_block7 = null;
+    			}
+
+    			if (/*drinkDetails*/ ctx[1].strIngredient9 != undefined) {
+    				if (if_block8) {
+    					if_block8.p(ctx, dirty);
+    				} else {
+    					if_block8 = create_if_block_7(ctx);
+    					if_block8.c();
+    					if_block8.m(ul, t11);
+    				}
+    			} else if (if_block8) {
+    				if_block8.d(1);
+    				if_block8 = null;
+    			}
+
+    			if (/*drinkDetails*/ ctx[1].strIngredient10 != undefined) {
+    				if (if_block9) {
+    					if_block9.p(ctx, dirty);
+    				} else {
+    					if_block9 = create_if_block_5(ctx);
+    					if_block9.c();
+    					if_block9.m(ul, t12);
+    				}
+    			} else if (if_block9) {
+    				if_block9.d(1);
+    				if_block9 = null;
+    			}
+
+    			if (/*drinkDetails*/ ctx[1].strIngredient11 != undefined) {
+    				if (if_block10) {
+    					if_block10.p(ctx, dirty);
+    				} else {
+    					if_block10 = create_if_block_3(ctx);
+    					if_block10.c();
+    					if_block10.m(ul, t13);
+    				}
+    			} else if (if_block10) {
+    				if_block10.d(1);
+    				if_block10 = null;
+    			}
+
+    			if (/*drinkDetails*/ ctx[1].strIngredient12 != undefined) {
+    				if (if_block11) {
+    					if_block11.p(ctx, dirty);
+    				} else {
+    					if_block11 = create_if_block_1(ctx);
+    					if_block11.c();
+    					if_block11.m(ul, t14);
+    				}
+    			} else if (if_block11) {
+    				if_block11.d(1);
+    				if_block11 = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t15_value !== (t15_value = /*drinkDetails*/ ctx[1].strInstructions + "")) set_data_dev(t15, t15_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(h3);
@@ -7259,6 +7382,12 @@ var app = (function () {
     			if (if_block3) if_block3.d();
     			if (if_block4) if_block4.d();
     			if (if_block5) if_block5.d();
+    			if (if_block6) if_block6.d();
+    			if (if_block7) if_block7.d();
+    			if (if_block8) if_block8.d();
+    			if (if_block9) if_block9.d();
+    			if (if_block10) if_block10.d();
+    			if (if_block11) if_block11.d();
     		}
     	};
 
@@ -7274,43 +7403,55 @@ var app = (function () {
     }
 
     // (29:8) {#if drinkDetails.strIngredient1 != undefined}
-    function create_if_block_6(ctx) {
+    function create_if_block_23(ctx) {
     	let li;
     	let t0;
-    	let t1_value = /*drinkDetails*/ ctx[1].strMeasure1 + "";
     	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient1 + "";
     	let t2;
-    	let t3_value = /*drinkDetails*/ ctx[1].strIngredient1 + "";
-    	let t3;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure1 != undefined && create_if_block_24(ctx);
 
     	const block = {
     		c: function create() {
     			li = element("li");
     			t0 = text("Ingredient 1: ");
-    			t1 = text(t1_value);
-    			t2 = space();
-    			t3 = text(t3_value);
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
     			add_location(li, file$1, 29, 8, 754);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
     			append_dev(li, t1);
     			append_dev(li, t2);
-    			append_dev(li, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*drinkDetails*/ 2 && t1_value !== (t1_value = /*drinkDetails*/ ctx[1].strMeasure1 + "")) set_data_dev(t1, t1_value);
-    			if (dirty & /*drinkDetails*/ 2 && t3_value !== (t3_value = /*drinkDetails*/ ctx[1].strIngredient1 + "")) set_data_dev(t3, t3_value);
+    			if (/*drinkDetails*/ ctx[1].strMeasure1 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_24(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient1 + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_6.name,
+    		id: create_if_block_23.name,
     		type: "if",
     		source: "(29:8) {#if drinkDetails.strIngredient1 != undefined}",
     		ctx
@@ -7319,44 +7460,87 @@ var app = (function () {
     	return block;
     }
 
-    // (32:8) {#if drinkDetails.strIngredient2 != undefined}
-    function create_if_block_5(ctx) {
-    	let li;
-    	let t0;
-    	let t1_value = /*drinkDetails*/ ctx[1].strMeasure2 + "";
-    	let t1;
-    	let t2;
-    	let t3_value = /*drinkDetails*/ ctx[1].strIngredient2 + "";
-    	let t3;
+    // (30:26) {#if drinkDetails.strMeasure1 != undefined}
+    function create_if_block_24(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure1 + "";
+    	let t;
 
     	const block = {
     		c: function create() {
-    			li = element("li");
-    			t0 = text("Ingredient 2: ");
-    			t1 = text(t1_value);
-    			t2 = space();
-    			t3 = text(t3_value);
-    			add_location(li, file$1, 32, 8, 911);
+    			t = text(t_value);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, li, anchor);
-    			append_dev(li, t0);
-    			append_dev(li, t1);
-    			append_dev(li, t2);
-    			append_dev(li, t3);
+    			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*drinkDetails*/ 2 && t1_value !== (t1_value = /*drinkDetails*/ ctx[1].strMeasure2 + "")) set_data_dev(t1, t1_value);
-    			if (dirty & /*drinkDetails*/ 2 && t3_value !== (t3_value = /*drinkDetails*/ ctx[1].strIngredient2 + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure1 + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(li);
+    			if (detaching) detach_dev(t);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_5.name,
+    		id: create_if_block_24.name,
+    		type: "if",
+    		source: "(30:26) {#if drinkDetails.strMeasure1 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (32:8) {#if drinkDetails.strIngredient2 != undefined}
+    function create_if_block_21(ctx) {
+    	let li;
+    	let t0;
+    	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient2 + "";
+    	let t2;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure2 != undefined && create_if_block_22(ctx);
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t0 = text("Ingredient 2: ");
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
+    			add_location(li, file$1, 32, 8, 960);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
+    			append_dev(li, t1);
+    			append_dev(li, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*drinkDetails*/ ctx[1].strMeasure2 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_22(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient2 + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_21.name,
     		type: "if",
     		source: "(32:8) {#if drinkDetails.strIngredient2 != undefined}",
     		ctx
@@ -7365,44 +7549,87 @@ var app = (function () {
     	return block;
     }
 
-    // (35:8) {#if drinkDetails.strIngredient3 != undefined}
-    function create_if_block_4(ctx) {
-    	let li;
-    	let t0;
-    	let t1_value = /*drinkDetails*/ ctx[1].strMeasure3 + "";
-    	let t1;
-    	let t2;
-    	let t3_value = /*drinkDetails*/ ctx[1].strIngredient3 + "";
-    	let t3;
+    // (33:26) {#if drinkDetails.strMeasure2 != undefined}
+    function create_if_block_22(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure2 + "";
+    	let t;
 
     	const block = {
     		c: function create() {
-    			li = element("li");
-    			t0 = text("Ingredient 3: ");
-    			t1 = text(t1_value);
-    			t2 = space();
-    			t3 = text(t3_value);
-    			add_location(li, file$1, 35, 8, 1068);
+    			t = text(t_value);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, li, anchor);
-    			append_dev(li, t0);
-    			append_dev(li, t1);
-    			append_dev(li, t2);
-    			append_dev(li, t3);
+    			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*drinkDetails*/ 2 && t1_value !== (t1_value = /*drinkDetails*/ ctx[1].strMeasure3 + "")) set_data_dev(t1, t1_value);
-    			if (dirty & /*drinkDetails*/ 2 && t3_value !== (t3_value = /*drinkDetails*/ ctx[1].strIngredient3 + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure2 + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(li);
+    			if (detaching) detach_dev(t);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_4.name,
+    		id: create_if_block_22.name,
+    		type: "if",
+    		source: "(33:26) {#if drinkDetails.strMeasure2 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (35:8) {#if drinkDetails.strIngredient3 != undefined}
+    function create_if_block_19(ctx) {
+    	let li;
+    	let t0;
+    	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient3 + "";
+    	let t2;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure3 != undefined && create_if_block_20(ctx);
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t0 = text("Ingredient 3: ");
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
+    			add_location(li, file$1, 35, 8, 1166);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
+    			append_dev(li, t1);
+    			append_dev(li, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*drinkDetails*/ ctx[1].strMeasure3 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_20(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient3 + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_19.name,
     		type: "if",
     		source: "(35:8) {#if drinkDetails.strIngredient3 != undefined}",
     		ctx
@@ -7411,44 +7638,87 @@ var app = (function () {
     	return block;
     }
 
-    // (38:8) {#if drinkDetails.strIngredient4 != undefined}
-    function create_if_block_3(ctx) {
-    	let li;
-    	let t0;
-    	let t1_value = /*drinkDetails*/ ctx[1].strMeasure4 + "";
-    	let t1;
-    	let t2;
-    	let t3_value = /*drinkDetails*/ ctx[1].strIngredient4 + "";
-    	let t3;
+    // (36:26) {#if drinkDetails.strMeasure3 != undefined}
+    function create_if_block_20(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure3 + "";
+    	let t;
 
     	const block = {
     		c: function create() {
-    			li = element("li");
-    			t0 = text("Ingredient 4: ");
-    			t1 = text(t1_value);
-    			t2 = space();
-    			t3 = text(t3_value);
-    			add_location(li, file$1, 38, 8, 1225);
+    			t = text(t_value);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, li, anchor);
-    			append_dev(li, t0);
-    			append_dev(li, t1);
-    			append_dev(li, t2);
-    			append_dev(li, t3);
+    			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*drinkDetails*/ 2 && t1_value !== (t1_value = /*drinkDetails*/ ctx[1].strMeasure4 + "")) set_data_dev(t1, t1_value);
-    			if (dirty & /*drinkDetails*/ 2 && t3_value !== (t3_value = /*drinkDetails*/ ctx[1].strIngredient4 + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure3 + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(li);
+    			if (detaching) detach_dev(t);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3.name,
+    		id: create_if_block_20.name,
+    		type: "if",
+    		source: "(36:26) {#if drinkDetails.strMeasure3 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (38:8) {#if drinkDetails.strIngredient4 != undefined}
+    function create_if_block_17(ctx) {
+    	let li;
+    	let t0;
+    	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient4 + "";
+    	let t2;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure4 != undefined && create_if_block_18(ctx);
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t0 = text("Ingredient 4: ");
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
+    			add_location(li, file$1, 38, 8, 1372);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
+    			append_dev(li, t1);
+    			append_dev(li, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*drinkDetails*/ ctx[1].strMeasure4 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_18(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient4 + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_17.name,
     		type: "if",
     		source: "(38:8) {#if drinkDetails.strIngredient4 != undefined}",
     		ctx
@@ -7457,44 +7727,87 @@ var app = (function () {
     	return block;
     }
 
-    // (41:8) {#if drinkDetails.strIngredient5 != undefined}
-    function create_if_block_2(ctx) {
-    	let li;
-    	let t0;
-    	let t1_value = /*drinkDetails*/ ctx[1].strMeasure5 + "";
-    	let t1;
-    	let t2;
-    	let t3_value = /*drinkDetails*/ ctx[1].strIngredient5 + "";
-    	let t3;
+    // (39:26) {#if drinkDetails.strMeasure4 != undefined}
+    function create_if_block_18(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure4 + "";
+    	let t;
 
     	const block = {
     		c: function create() {
-    			li = element("li");
-    			t0 = text("Ingredient 5: ");
-    			t1 = text(t1_value);
-    			t2 = space();
-    			t3 = text(t3_value);
-    			add_location(li, file$1, 41, 8, 1382);
+    			t = text(t_value);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, li, anchor);
-    			append_dev(li, t0);
-    			append_dev(li, t1);
-    			append_dev(li, t2);
-    			append_dev(li, t3);
+    			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*drinkDetails*/ 2 && t1_value !== (t1_value = /*drinkDetails*/ ctx[1].strMeasure5 + "")) set_data_dev(t1, t1_value);
-    			if (dirty & /*drinkDetails*/ 2 && t3_value !== (t3_value = /*drinkDetails*/ ctx[1].strIngredient5 + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure4 + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(li);
+    			if (detaching) detach_dev(t);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2.name,
+    		id: create_if_block_18.name,
+    		type: "if",
+    		source: "(39:26) {#if drinkDetails.strMeasure4 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (41:8) {#if drinkDetails.strIngredient5 != undefined}
+    function create_if_block_15(ctx) {
+    	let li;
+    	let t0;
+    	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient5 + "";
+    	let t2;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure5 != undefined && create_if_block_16(ctx);
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t0 = text("Ingredient 5: ");
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
+    			add_location(li, file$1, 41, 8, 1578);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
+    			append_dev(li, t1);
+    			append_dev(li, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*drinkDetails*/ ctx[1].strMeasure5 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_16(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient5 + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_15.name,
     		type: "if",
     		source: "(41:8) {#if drinkDetails.strIngredient5 != undefined}",
     		ctx
@@ -7503,38 +7816,615 @@ var app = (function () {
     	return block;
     }
 
+    // (42:26) {#if drinkDetails.strMeasure5 != undefined}
+    function create_if_block_16(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure5 + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(t_value);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure5 + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_16.name,
+    		type: "if",
+    		source: "(42:26) {#if drinkDetails.strMeasure5 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
     // (44:8) {#if drinkDetails.strIngredient6 != undefined}
-    function create_if_block_1(ctx) {
+    function create_if_block_13(ctx) {
     	let li;
     	let t0;
-    	let t1_value = /*drinkDetails*/ ctx[1].strMeasure6 + "";
     	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient6 + "";
     	let t2;
-    	let t3_value = /*drinkDetails*/ ctx[1].strIngredient6 + "";
-    	let t3;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure6 != undefined && create_if_block_14(ctx);
 
     	const block = {
     		c: function create() {
     			li = element("li");
     			t0 = text("Ingredient 6: ");
-    			t1 = text(t1_value);
-    			t2 = space();
-    			t3 = text(t3_value);
-    			add_location(li, file$1, 44, 8, 1539);
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
+    			add_location(li, file$1, 44, 8, 1784);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
     			append_dev(li, t1);
     			append_dev(li, t2);
-    			append_dev(li, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*drinkDetails*/ 2 && t1_value !== (t1_value = /*drinkDetails*/ ctx[1].strMeasure6 + "")) set_data_dev(t1, t1_value);
-    			if (dirty & /*drinkDetails*/ 2 && t3_value !== (t3_value = /*drinkDetails*/ ctx[1].strIngredient6 + "")) set_data_dev(t3, t3_value);
+    			if (/*drinkDetails*/ ctx[1].strMeasure6 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_14(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient6 + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_13.name,
+    		type: "if",
+    		source: "(44:8) {#if drinkDetails.strIngredient6 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (45:26) {#if drinkDetails.strMeasure6 != undefined}
+    function create_if_block_14(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure6 + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(t_value);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure6 + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_14.name,
+    		type: "if",
+    		source: "(45:26) {#if drinkDetails.strMeasure6 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (47:8) {#if drinkDetails.strIngredient7 != undefined}
+    function create_if_block_11(ctx) {
+    	let li;
+    	let t0;
+    	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient7 + "";
+    	let t2;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure7 != undefined && create_if_block_12(ctx);
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t0 = text("Ingredient 7: ");
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
+    			add_location(li, file$1, 47, 8, 1990);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
+    			append_dev(li, t1);
+    			append_dev(li, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*drinkDetails*/ ctx[1].strMeasure7 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_12(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient7 + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_11.name,
+    		type: "if",
+    		source: "(47:8) {#if drinkDetails.strIngredient7 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (48:26) {#if drinkDetails.strMeasure7 != undefined}
+    function create_if_block_12(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure7 + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(t_value);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure7 + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_12.name,
+    		type: "if",
+    		source: "(48:26) {#if drinkDetails.strMeasure7 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (50:8) {#if drinkDetails.strIngredient8 != undefined}
+    function create_if_block_9(ctx) {
+    	let li;
+    	let t0;
+    	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient8 + "";
+    	let t2;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure8 != undefined && create_if_block_10(ctx);
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t0 = text("Ingredient 8: ");
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
+    			add_location(li, file$1, 50, 8, 2196);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
+    			append_dev(li, t1);
+    			append_dev(li, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*drinkDetails*/ ctx[1].strMeasure8 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_10(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient8 + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_9.name,
+    		type: "if",
+    		source: "(50:8) {#if drinkDetails.strIngredient8 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (51:26) {#if drinkDetails.strMeasure8 != undefined}
+    function create_if_block_10(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure8 + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(t_value);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure8 + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_10.name,
+    		type: "if",
+    		source: "(51:26) {#if drinkDetails.strMeasure8 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (53:8) {#if drinkDetails.strIngredient9 != undefined}
+    function create_if_block_7(ctx) {
+    	let li;
+    	let t0;
+    	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient9 + "";
+    	let t2;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure9 != undefined && create_if_block_8(ctx);
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t0 = text("Ingredient 9: ");
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
+    			add_location(li, file$1, 53, 8, 2402);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
+    			append_dev(li, t1);
+    			append_dev(li, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*drinkDetails*/ ctx[1].strMeasure9 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_8(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient9 + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_7.name,
+    		type: "if",
+    		source: "(53:8) {#if drinkDetails.strIngredient9 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (54:26) {#if drinkDetails.strMeasure9 != undefined}
+    function create_if_block_8(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure9 + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(t_value);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure9 + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_8.name,
+    		type: "if",
+    		source: "(54:26) {#if drinkDetails.strMeasure9 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (56:8) {#if drinkDetails.strIngredient10 != undefined}
+    function create_if_block_5(ctx) {
+    	let li;
+    	let t0;
+    	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient10 + "";
+    	let t2;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure10 != undefined && create_if_block_6(ctx);
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t0 = text("Ingredient 10: ");
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
+    			add_location(li, file$1, 56, 8, 2609);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
+    			append_dev(li, t1);
+    			append_dev(li, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*drinkDetails*/ ctx[1].strMeasure10 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_6(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient10 + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_5.name,
+    		type: "if",
+    		source: "(56:8) {#if drinkDetails.strIngredient10 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (57:27) {#if drinkDetails.strMeasure10 != undefined}
+    function create_if_block_6(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure10 + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(t_value);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure10 + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_6.name,
+    		type: "if",
+    		source: "(57:27) {#if drinkDetails.strMeasure10 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (59:8) {#if drinkDetails.strIngredient11 != undefined}
+    function create_if_block_3(ctx) {
+    	let li;
+    	let t0;
+    	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient11 + "";
+    	let t2;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure11 != undefined && create_if_block_4(ctx);
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t0 = text("Ingredient 11: ");
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
+    			add_location(li, file$1, 59, 8, 2820);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
+    			append_dev(li, t1);
+    			append_dev(li, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*drinkDetails*/ ctx[1].strMeasure11 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_4(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient11 + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_3.name,
+    		type: "if",
+    		source: "(59:8) {#if drinkDetails.strIngredient11 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (60:27) {#if drinkDetails.strMeasure11 != undefined}
+    function create_if_block_4(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure11 + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(t_value);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure11 + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_4.name,
+    		type: "if",
+    		source: "(60:27) {#if drinkDetails.strMeasure11 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (62:8) {#if drinkDetails.strIngredient12 != undefined}
+    function create_if_block_1(ctx) {
+    	let li;
+    	let t0;
+    	let t1;
+    	let t2_value = /*drinkDetails*/ ctx[1].strIngredient12 + "";
+    	let t2;
+    	let if_block = /*drinkDetails*/ ctx[1].strMeasure12 != undefined && create_if_block_2(ctx);
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t0 = text("Ingredient 12: ");
+    			if (if_block) if_block.c();
+    			t1 = space();
+    			t2 = text(t2_value);
+    			add_location(li, file$1, 62, 8, 3031);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t0);
+    			if (if_block) if_block.m(li, null);
+    			append_dev(li, t1);
+    			append_dev(li, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*drinkDetails*/ ctx[1].strMeasure12 != undefined) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_2(ctx);
+    					if_block.c();
+    					if_block.m(li, t1);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (dirty & /*drinkDetails*/ 2 && t2_value !== (t2_value = /*drinkDetails*/ ctx[1].strIngredient12 + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			if (if_block) if_block.d();
     		}
     	};
 
@@ -7542,7 +8432,38 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(44:8) {#if drinkDetails.strIngredient6 != undefined}",
+    		source: "(62:8) {#if drinkDetails.strIngredient12 != undefined}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (63:27) {#if drinkDetails.strMeasure12 != undefined}
+    function create_if_block_2(ctx) {
+    	let t_value = /*drinkDetails*/ ctx[1].strMeasure12 + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(t_value);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*drinkDetails*/ 2 && t_value !== (t_value = /*drinkDetails*/ ctx[1].strMeasure12 + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2.name,
+    		type: "if",
+    		source: "(63:27) {#if drinkDetails.strMeasure12 != undefined}",
     		ctx
     	});
 

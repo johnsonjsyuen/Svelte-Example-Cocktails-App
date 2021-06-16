@@ -27,23 +27,42 @@
     <img src={drinkDetails.strDrinkThumb+"/preview"} alt={drinkDetails.idDrink} width=200 height=200/>
     <ul>
         {#if drinkDetails.strIngredient1 != undefined}
-        <li>Ingredient 1: {drinkDetails.strMeasure1} {drinkDetails.strIngredient1}</li>
+        <li>Ingredient 1: {#if drinkDetails.strMeasure1 != undefined} {drinkDetails.strMeasure1}{/if} {drinkDetails.strIngredient1}</li>
         {/if}
         {#if drinkDetails.strIngredient2 != undefined}
-        <li>Ingredient 2: {drinkDetails.strMeasure2} {drinkDetails.strIngredient2}</li>
+        <li>Ingredient 2: {#if drinkDetails.strMeasure2 != undefined} {drinkDetails.strMeasure2}{/if} {drinkDetails.strIngredient2}</li>
         {/if}
         {#if drinkDetails.strIngredient3 != undefined}
-        <li>Ingredient 3: {drinkDetails.strMeasure3} {drinkDetails.strIngredient3}</li>
+        <li>Ingredient 3: {#if drinkDetails.strMeasure3 != undefined} {drinkDetails.strMeasure3}{/if} {drinkDetails.strIngredient3}</li>
         {/if}
         {#if drinkDetails.strIngredient4 != undefined}
-        <li>Ingredient 4: {drinkDetails.strMeasure4} {drinkDetails.strIngredient4}</li>
+        <li>Ingredient 4: {#if drinkDetails.strMeasure4 != undefined} {drinkDetails.strMeasure4}{/if} {drinkDetails.strIngredient4}</li>
         {/if}
         {#if drinkDetails.strIngredient5 != undefined}
-        <li>Ingredient 5: {drinkDetails.strMeasure5} {drinkDetails.strIngredient5}</li>
+        <li>Ingredient 5: {#if drinkDetails.strMeasure5 != undefined} {drinkDetails.strMeasure5}{/if} {drinkDetails.strIngredient5}</li>
         {/if}
         {#if drinkDetails.strIngredient6 != undefined}
-        <li>Ingredient 6: {drinkDetails.strMeasure6} {drinkDetails.strIngredient6}</li>
+        <li>Ingredient 6: {#if drinkDetails.strMeasure6 != undefined} {drinkDetails.strMeasure6}{/if} {drinkDetails.strIngredient6}</li>
         {/if}
+        {#if drinkDetails.strIngredient7 != undefined}
+        <li>Ingredient 7: {#if drinkDetails.strMeasure7 != undefined} {drinkDetails.strMeasure7}{/if} {drinkDetails.strIngredient7}</li>
+        {/if}
+        {#if drinkDetails.strIngredient8 != undefined}
+        <li>Ingredient 8: {#if drinkDetails.strMeasure8 != undefined} {drinkDetails.strMeasure8}{/if} {drinkDetails.strIngredient8}</li>
+        {/if}
+        {#if drinkDetails.strIngredient9 != undefined}
+        <li>Ingredient 9: {#if drinkDetails.strMeasure9 != undefined} {drinkDetails.strMeasure9}{/if} {drinkDetails.strIngredient9}</li>
+        {/if}
+        {#if drinkDetails.strIngredient10 != undefined}
+        <li>Ingredient 10: {#if drinkDetails.strMeasure10 != undefined} {drinkDetails.strMeasure10}{/if} {drinkDetails.strIngredient10}</li>
+        {/if}
+        {#if drinkDetails.strIngredient11 != undefined}
+        <li>Ingredient 11: {#if drinkDetails.strMeasure11 != undefined} {drinkDetails.strMeasure11}{/if} {drinkDetails.strIngredient11}</li>
+        {/if}
+        {#if drinkDetails.strIngredient12 != undefined}
+        <li>Ingredient 12: {#if drinkDetails.strMeasure12 != undefined} {drinkDetails.strMeasure12}{/if} {drinkDetails.strIngredient12}</li>
+        {/if}
+    {drinkDetails.strInstructions}
     </ul>
 {/if}  
 </main>
